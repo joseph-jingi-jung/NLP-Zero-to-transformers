@@ -42,7 +42,7 @@ class Trainer():
             total_count = 0
             total_correct = 0
             
-            for step, batch in tqdm(self.train_dataloader):
+            for step, batch in enumerate(self.train_dataloader):
                 x = batch[0].to(self.device)
                 y = batch[1].to(self.device)
 
